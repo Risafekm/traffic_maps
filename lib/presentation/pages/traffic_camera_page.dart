@@ -17,7 +17,15 @@ class TrafficCameraPage extends StatelessWidget {
       create: (_) => TrafficCameraCubit(sl())..fetchCameras(),
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Traffic Cameras'),
+          centerTitle: true,
+          title: const Text(
+            'Traffic Cameras',
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
           backgroundColor: Colors.teal,
         ),
         body: BlocBuilder<TrafficCameraCubit, TrafficCameraState>(
