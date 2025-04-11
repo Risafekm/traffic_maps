@@ -1,4 +1,3 @@
-// presentation/widgets/camera_info_bottom_sheet.dart
 import 'package:flutter/material.dart';
 
 class CameraInfoBottomSheet extends StatelessWidget {
@@ -31,7 +30,17 @@ class CameraInfoBottomSheet extends StatelessWidget {
             Expanded(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16),
-                child: Image.network(imageUrl, fit: BoxFit.cover),
+                child: Image.network(
+                  imageUrl,
+                  fit: BoxFit.cover,
+                  loadingBuilder: (context, child, loadingProgress) {
+                    if (loadingProgress == null) return child;
+                    return const Center(child: CircularProgressIndicator());
+                  },
+                  errorBuilder: (context, error, stackTrace) {
+                    return const Center(child: Text('Failed to load image'));
+                  },
+                ),
               ),
             ),
           ],
