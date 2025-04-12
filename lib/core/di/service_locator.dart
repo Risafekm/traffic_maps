@@ -1,4 +1,3 @@
-// core/di/service_locator.dart
 import 'package:get_it/get_it.dart';
 import 'package:traffic_map/core/network/api_service.dart';
 import 'package:traffic_map/data/repositories/traffic_repository_imp.dart';

@@ -1,7 +1,4 @@
-// data/models/traffic_camera_model.dart
-
 // ignore_for_file: use_super_parameters
-
 import 'package:traffic_map/domain/entities/traffic_entity.dart';
 
 class TrafficCameraModel extends TrafficCameraEntity {

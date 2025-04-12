@@ -1,4 +1,3 @@
-// domain/entities/traffic_camera_entity.dart
 class TrafficCameraEntity {
   final String cameraId;
   final String imageUrl;

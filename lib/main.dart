@@ -1,4 +1,3 @@
-// main.dart
 import 'package:flutter/material.dart';
 import 'package:traffic_map/presentation/pages/splash_screen.dart';
 import 'core/di/service_locator.dart' as di;
